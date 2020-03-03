@@ -16,12 +16,17 @@ public class Lab11 {
         frame.setLocation(850,350);//x, y);
         frame.setLayout(new GridLayout(2,1));
 
+		// Creates a text area for text to appear in
         JTextArea textArea = new JTextArea(5, 20);
+		// Set the text to not be editable, no one can type in it.
         textArea.setEditable(false);
+		// Create a scrolling window and add the textArea to it
         JScrollPane scrollPane = new JScrollPane(textArea);
         frame.getContentPane().add(scrollPane);
+		// Creating a lable
         JLabel label = new JLabel();
         
+		// Reads matrix and set the label and text area
         readAndDisplayMatrix(frame, textArea, label);
     }
    
